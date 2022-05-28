@@ -81,11 +81,101 @@ function funcChangingContant(six) {}
 // 12.	צרו 6 אלמנטי P ריקים ב html, צרו פונקציה שמכניסה להם אלמנט SPAN עם טקסט.
 
 function creatContantToHtml() {
-  for (var i = 0; i < 6; i++) {
-    var paragraph = document.querySelector(".seven");
-    paragraph.innerHTML = "<span>HELLO WORLD</span>";
+  var paragraph = document.getElementsByClassName("seven");
+  for (var i = 0; i < paragraph.length; i++) {
+    paragraph[i].innerHTML = "<span> Hello World!</span>";
+    paragraph[i].style.backgroundColor = "yellow";
   }
-
-  console.log(paragraph);
 }
 creatContantToHtml();
+
+// 13.	צרו פונקציה המקבלת מהמשתמש שם פרטי, שם משפחה וגיל,
+//   היא מדפיסה למסך את כל הפרטים, אם המשתמש מעל 18 היא מציגה מתחת לפרטים קלט.
+
+function userDetalisToPrint() {
+  var user = {};
+  user.firstName = prompt("first name:");
+  user.lastName = prompt("last name:");
+  user.age = +prompt("age:");
+
+  if (user.age > 18) {
+    document.writeln(
+      "First Name:" +
+        user.firstName +
+        " " +
+        "Last Name:" +
+        user.lastName +
+        " " +
+        "Age:" +
+        user.age +
+        "<br/>"
+    );
+    var input = document.createElement("input");
+    var body = document.body;
+    body.append(input);
+  }
+}
+// userDetalisToPrint();
+
+// 14.	צרו פונקציה המייצרת אובייקט של סרט, עם שם, מספר צפיות,
+//   שנה ותמונה.תנו להם ערכים מהמשתמש, הדפיסו למסך את הסרטים בצורה יפה,
+//     כולל התמונה, שם - הכי גדול ושנה הכי קטן
+
+function moviesObejects() {
+  var img = document.getElementById("eight");
+
+  var movie = {};
+
+  movie.name = prompt("Movie Name:");
+  movie.views = +prompt("No. of views:");
+  movie.year = +prompt("Year:");
+  img.src = "" + prompt("Add URL Picture:");
+  movie.pic = img;
+
+  document.write(
+    "<h2>" +
+      movie.name +
+      "</h2>" +
+      "<br/>" +
+      movie.views +
+      "<br/>" +
+      "<h6>" +
+      movie.year +
+      "</h6>"
+  );
+  document.write(img[i]);
+}
+// moviesObejects();
+
+// 15.	צרו אובייקט של עובד, בעזרת קלטים צרו שדות של שם פרטי, שם משפחה,
+//   אימייל ומחלקה.ותנו להם ערכים מהמשתמש, הדפיסו את האובייקט למסך, כל ערך באלמנט משלו.
+
+function workerObeject() {
+  var worker = {};
+  worker.firstName = prompt("First Name:");
+  worker.lastName = prompt("Last Name:");
+  worker.email = prompt("Email:");
+  worker.department = prompt("Department:");
+
+  document.write(
+    "<h1>" +
+      worker.firstName +
+      "</h1>" +
+      "<h2>" +
+      worker.lastName +
+      "</h2>" +
+      "<p>" +
+      worker.email +
+      "</p>" +
+      "<h6>" +
+      worker.department +
+      "</h6>"
+  );
+}
+
+// workerObeject();
+
+// 16.	צרו פונקציה הקולטת מספר מהמשתמש ומייצרת מספר אובייקטים,
+//   על פי הקלט, של בניין, לכל בניין יש שם קבלן, שם חברה,
+//   מספר קומות ומספר דירות בקומה.תנו להם ערכים מהמשתמש,
+//     הדפיסו כל אובייקט למסך, כל אובייקט באלמנט משלו.
