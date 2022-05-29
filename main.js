@@ -54,8 +54,8 @@ function creatTagAndText() {
   var userText = prompt("Text:");
   var userTag1 = prompt("<tag>:");
   var userTag2 = prompt("</tag>:");
-  document.getElementById("five").innerHTML =
-    userTag1 + " " + userText + " " + userTag2;
+
+  five.innerHTML = userTag1 + " " + userText + " " + userTag2;
 }
 // creatTagAndText();
 
@@ -179,3 +179,97 @@ function workerObeject() {
 //   על פי הקלט, של בניין, לכל בניין יש שם קבלן, שם חברה,
 //   מספר קומות ומספר דירות בקומה.תנו להם ערכים מהמשתמש,
 //     הדפיסו כל אובייקט למסך, כל אובייקט באלמנט משלו.
+
+function buildingObject() {
+  var numOfObejct = +prompt("Number Of Buildings:");
+  var building = {};
+
+  for (var i = 0; i < numOfObejct; i++) {
+    building.contractor = prompt("Contractor Name:");
+    building.company = prompt("Company Name:");
+    building.floors = +prompt("No. Of Floors:");
+    building.appartments = +prompt("No. of Appartments on Floor:");
+
+    document.write(
+      "<h1>" +
+        building.contractor +
+        "</h1>" +
+        "<h2>" +
+        building.company +
+        "</h2>" +
+        "<h3>" +
+        building.floors +
+        "</h3>" +
+        "<h4>" +
+        building.appartments +
+        "</h4>"
+    );
+  }
+}
+// buildingObject();
+
+// 17.	צרו פונקציה הקולטת מספר מהמשתמש ומייצרת מספר אובייקטים, על פי הקלט, של חנות,
+//   לכל חנות יש שם החנות, כתובת, מספר מחלקות ומספר עובדים.תנו להם ערכים מהמשתמש,
+//     הדפיסו רק למסך רק חנוית עם מספר עובדים גבוה מ 10, כל אובייקט באלמנט משלו.
+
+function storeObjects() {
+  var numOfObejcts = +prompt("Number Of Store:");
+  var store = {};
+  for (var i = 0; i < numOfObejcts; i++) {
+    store.name = prompt("Store Name:");
+    store.address = prompt("Address' Name:");
+    store.departments = +prompt("Departments' Number:");
+    store.employees = +prompt("Employees Number:");
+
+    if (store.employees > 10) {
+      document.write(
+        "<p>" +
+          store.name +
+          "</p>" +
+          "<u>" +
+          store.address +
+          "</u>" +
+          "<h1>" +
+          store.departments +
+          "</h1>" +
+          "<h6>" +
+          store.employees +
+          "</h6>"
+      );
+    }
+  }
+}
+
+// storeObjects();
+
+// 18.	צרו פונקציה שמדפיסה ללוג כמה אלמנטים נוצרו במסך בפונקציה הקודמת (סעיף 17).
+
+function numOfElementsLastFunc() {
+  var lastFunc = storeObjects();
+  var countElements = Element.get;
+
+  console.log(countElements);
+}
+
+// numOfElementsLastFunc();
+
+// 19.	צרו רשימה ב html וצרו פונקציה הקולטת מספר מהמשתמש ומייצרת מספר אובייקטים,
+//   על פי הקלט, של איש קשר, לכל איש קשר יש שם מלא, חברה, טלפון, נייד ואימייל
+//     .תנו להם ערכים מהמשתמש, הדפיסו כל שם של איש קשר לרשימה
+
+function contantObjects() {
+  // var numOfObejcts = +prompt("Number Of Contact: ");
+  var contact = {};
+  var list = document.getElementsByClassName("nine");
+  // for (var i = 0; i < numOfObejcts; i++){
+
+  // contact.name = prompt("Contact Full Name:");
+  // contact.company = prompt("Company:");
+  // contact.tel = +prompt("Tel:");
+  contact.email = prompt("Email:");
+  list.innerHTML = contact.email;
+  document.write(list[0]);
+
+  // }
+}
+contantObjects();
