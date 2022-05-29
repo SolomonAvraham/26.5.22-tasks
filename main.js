@@ -261,18 +261,39 @@ function contantObjects() {
   var numOfObejcts = +prompt("Number Of Contact: ");
   var contact = {};
   var list = document.getElementsByClassName("nine");
-  for (var i = 0; i < numOfObejcts; i++){
-
-  contact.name = prompt("Contact Full Name:");
-  contact.company = prompt("Company:");
-  contact.tel = +prompt("Tel:");
-  contact.email = prompt("Email:");
-  list[i].innerText = contact.name;
-  
+  for (var i = 0; i < numOfObejcts; i++) {
+    contact.name = prompt("Contact Full Name:");
+    contact.company = prompt("Company:");
+    contact.tel = +prompt("Tel:");
+    contact.email = prompt("Email:");
+    list[i].innerText = contact.name;
   }
-  
-
-
-
 }
-contantObjects();
+// contantObjects();
+
+// 20. * אתגר - צרו טבלה ב html וצרו פונקציה הקולטת מספר מהמשתמש ומייצרת מספר אובייקטים,
+//   על פי הקלט, של רופא, לכל רופא יש שם מלא, התמחות, טלפון,
+//     האם זמין ואימייל.תנו להם ערכים מהמשתמש, הדפיסו כל אובייקט לשורה בטבלה.
+
+function doctorObjects() {
+  var numOfObejcts = +prompt("Numbers of Doctors:");
+  var doctor = {};
+
+  for (var i = 0; i < numOfObejcts; i++) {
+    doctor.name = prompt("Full Name:");
+    doctor.specialization = prompt("Specialization:");
+    doctor.tel = +prompt("tel:");
+    doctor.available = prompt("Available:", "yes or no");
+    doctor.email = prompt("Email:");
+    // fullName.innerText = doctor.name;
+    // specialization.innerText = doctor.specialization;
+    // tel.innerText = doctor.tel;
+    // available.innerText = doctor.available;
+    // email.innerText = doctor.email;
+    // ten[i].innerText = "fsfsfsfs";
+    var doctorClass = document.getElementsByClassName("ten");
+    doctorClass[i].innerText = doctor;
+ 
+  }
+}
+// doctorObjects();
