@@ -258,18 +258,21 @@ function numOfElementsLastFunc() {
 //     .תנו להם ערכים מהמשתמש, הדפיסו כל שם של איש קשר לרשימה
 
 function contantObjects() {
-  // var numOfObejcts = +prompt("Number Of Contact: ");
+  var numOfObejcts = +prompt("Number Of Contact: ");
   var contact = {};
   var list = document.getElementsByClassName("nine");
-  // for (var i = 0; i < numOfObejcts; i++){
+  for (var i = 0; i < numOfObejcts; i++){
 
-  // contact.name = prompt("Contact Full Name:");
-  // contact.company = prompt("Company:");
-  // contact.tel = +prompt("Tel:");
+  contact.name = prompt("Contact Full Name:");
+  contact.company = prompt("Company:");
+  contact.tel = +prompt("Tel:");
   contact.email = prompt("Email:");
-  list.innerHTML = contact.email;
-  document.write(list[0]);
+  list[i].innerText = contact.name;
+  
+  }
+  
 
-  // }
+
+
 }
 contantObjects();
