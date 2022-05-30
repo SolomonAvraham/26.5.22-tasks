@@ -63,10 +63,9 @@ function creatTagAndText() {
 
 function inPutFromUser() {
   var userType = prompt("Enter Input type:", "color,text,date etc'");
-  var body = document.body;
   var input = document.createElement("input");
   input.type = userType;
-  body.append(input);
+  document.body.append(input);
 }
 
 // inPutFromUser();
@@ -74,8 +73,12 @@ function inPutFromUser() {
 // 11.	צרו פונקציה המקבלת כארגומנט שם
 // class וטקסט, הפונקציה משנה את התוכן של כל האלמנטים עם ה class שהתקבל לטקסט שהמשתמש הכניס.
 
-function funcChangingContant(six) {}
+function funcChangingContant(a, b) {
+  var pElement = document.getElementsByClassName("six");
 
+  for (var i = 0; i < pElement.length; i++) {}
+}
+// funcChangingContant(a, b);
 // לא פתור!
 
 // 12.	צרו 6 אלמנטי P ריקים ב html, צרו פונקציה שמכניסה להם אלמנט SPAN עם טקסט.
@@ -250,6 +253,8 @@ function numOfElementsLastFunc() {
 
   console.log(countElements);
 }
+// לא פתור!
+
 
 // numOfElementsLastFunc();
 
@@ -293,7 +298,6 @@ function doctorObjects() {
     // ten[i].innerText = "fsfsfsfs";
     var doctorClass = document.getElementsByClassName("ten");
     doctorClass[i].innerText = doctor;
- 
   }
 }
 // doctorObjects();
