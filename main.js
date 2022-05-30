@@ -73,12 +73,14 @@ function inPutFromUser() {
 // 11.	צרו פונקציה המקבלת כארגומנט שם
 // class וטקסט, הפונקציה משנה את התוכן של כל האלמנטים עם ה class שהתקבל לטקסט שהמשתמש הכניס.
 
-function funcChangingContant(a, b) {
+function funcChangingContant(className, classText) {
   var pElement = document.getElementsByClassName("six");
 
-  for (var i = 0; i < pElement.length; i++) {}
+  for (var i = 0; i < pElement.length; i++) {
+    pElement[i].innerText = classText;
+  }
 }
-// funcChangingContant(a, b);
+funcChangingContant(".six", "Hello World!");
 // לא פתור!
 
 // 12.	צרו 6 אלמנטי P ריקים ב html, צרו פונקציה שמכניסה להם אלמנט SPAN עם טקסט.
@@ -114,8 +116,7 @@ function userDetalisToPrint() {
         "<br/>"
     );
     var input = document.createElement("input");
-    var body = document.body;
-    body.append(input);
+    document.body.append(input);
   }
 }
 // userDetalisToPrint();
@@ -225,20 +226,19 @@ function storeObjects() {
     store.employees = +prompt("Employees Number:");
 
     if (store.employees > 10) {
-      document.write(
+      document.body.innerHTML =
         "<p>" +
-          store.name +
-          "</p>" +
-          "<u>" +
-          store.address +
-          "</u>" +
-          "<h1>" +
-          store.departments +
-          "</h1>" +
-          "<h6>" +
-          store.employees +
-          "</h6>"
-      );
+        store.name +
+        "</p>" +
+        "<u>" +
+        store.address +
+        "</u>" +
+        "<h1>" +
+        store.departments +
+        "</h1>" +
+        "<h6>" +
+        store.employees +
+        "</h6>";
     }
   }
 }
@@ -254,7 +254,6 @@ function numOfElementsLastFunc() {
   console.log(countElements);
 }
 // לא פתור!
-
 
 // numOfElementsLastFunc();
 
@@ -290,14 +289,26 @@ function doctorObjects() {
     doctor.tel = +prompt("tel:");
     doctor.available = prompt("Available:", "yes or no");
     doctor.email = prompt("Email:");
-    // fullName.innerText = doctor.name;
-    // specialization.innerText = doctor.specialization;
-    // tel.innerText = doctor.tel;
-    // available.innerText = doctor.available;
-    // email.innerText = doctor.email;
-    // ten[i].innerText = "fsfsfsfs";
-    var doctorClass = document.getElementsByClassName("ten");
-    doctorClass[i].innerText = doctor;
+    var doctorId = document.getElementById("ten");
+    doctorId.innerHTML += "<tr>" +
+      "<td>" +
+      doctor.name +
+      "</td>" +
+      "<td>" +
+      doctor.specialization +
+      "</td>" +
+      "<td>" +
+      doctor.tel +
+      "</td>" +
+      "<td>" +
+      doctor.available +
+      "</td>" +
+      "<td>" +
+      doctor.email +
+      "</td>" + "</tr>";
+    
+
+    
   }
 }
-// doctorObjects();
+doctorObjects();
