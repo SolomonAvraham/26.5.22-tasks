@@ -81,7 +81,7 @@ function funcChangingContant(className, classText) {
   }
 }
 funcChangingContant(".six", "Hello World!");
-// לא פתור!
+ 
 
 // 12.	צרו 6 אלמנטי P ריקים ב html, צרו פונקציה שמכניסה להם אלמנט SPAN עם טקסט.
 
@@ -264,13 +264,13 @@ function numOfElementsLastFunc() {
 function contantObjects() {
   var numOfObejcts = +prompt("Number Of Contact: ");
   var contact = {};
-  var list = document.getElementsByClassName("nine");
+  var list = document.getElementById("nine")
   for (var i = 0; i < numOfObejcts; i++) {
     contact.name = prompt("Contact Full Name:");
-    contact.company = prompt("Company:");
-    contact.tel = +prompt("Tel:");
-    contact.email = prompt("Email:");
-    list[i].innerText = contact.name;
+    // contact.company = prompt("Company:");
+    // contact.tel = +prompt("Tel:");
+    // contact.email = prompt("Email:");
+    list.innerHTML += "<li>" + contact.name + "</li>";
   }
 }
 // contantObjects();
@@ -311,4 +311,4 @@ function doctorObjects() {
     
   }
 }
-doctorObjects();
+// doctorObjects();
