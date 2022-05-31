@@ -81,7 +81,6 @@ function funcChangingContant(className, classText) {
   }
 }
 funcChangingContant(".six", "Hello World!");
- 
 
 // 12.	צרו 6 אלמנטי P ריקים ב html, צרו פונקציה שמכניסה להם אלמנט SPAN עם טקסט.
 
@@ -229,16 +228,10 @@ function storeObjects() {
       document.body.innerHTML =
         "<p>" +
         store.name +
-        "</p>" +
-        "<u>" +
         store.address +
-        "</u>" +
-        "<h1>" +
         store.departments +
-        "</h1>" +
-        "<h6>" +
         store.employees +
-        "</h6>";
+        "</p>";
     }
   }
 }
@@ -246,13 +239,17 @@ function storeObjects() {
 // storeObjects();
 
 // 18.	צרו פונקציה שמדפיסה ללוג כמה אלמנטים נוצרו במסך בפונקציה הקודמת (סעיף 17).
+// var numOfElements = storeObjects();
+// numOfElements.getElementsByTagName("*");
+// var text = "";
+// for (var i = 0; i < numOfElements.length; i++) {
+// text += numOfElements[i].tagName + "<br>";
 
-function numOfElementsLastFunc() {
-  var lastFunc = storeObjects();
-  var countElements = Element.get;
 
-  console.log(countElements);
-}
+// }
+// document.getElementById("demo").innerHTML = text;
+
+
 // לא פתור!
 
 // numOfElementsLastFunc();
@@ -264,7 +261,7 @@ function numOfElementsLastFunc() {
 function contantObjects() {
   var numOfObejcts = +prompt("Number Of Contact: ");
   var contact = {};
-  var list = document.getElementById("nine")
+  var list = document.getElementById("nine");
   for (var i = 0; i < numOfObejcts; i++) {
     contact.name = prompt("Contact Full Name:");
     // contact.company = prompt("Company:");
@@ -290,7 +287,8 @@ function doctorObjects() {
     doctor.available = prompt("Available:", "yes or no");
     doctor.email = prompt("Email:");
     var doctorId = document.getElementById("ten");
-    doctorId.innerHTML += "<tr>" +
+    doctorId.innerHTML +=
+      "<tr>" +
       "<td>" +
       doctor.name +
       "</td>" +
@@ -305,23 +303,9 @@ function doctorObjects() {
       "</td>" +
       "<td>" +
       doctor.email +
-      "</td>" + "</tr>";
-    
-
-    
+      "</td>" +
+      "</tr>";
   }
 }
 // doctorObjects();
-
-
-
-
-var a = document.getElementById("ccc");
-a.innerText="SSSSSSSS VVVVVVVV DDDDDD";
-a.onclick = function () {
-  a.innerText = "YEAHHHH SIRRR";
-  
-  
-}
-
 
