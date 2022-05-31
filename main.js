@@ -312,3 +312,16 @@ function doctorObjects() {
   }
 }
 // doctorObjects();
+
+
+
+
+var a = document.getElementById("ccc");
+a.innerText="SSSSSSSS VVVVVVVV DDDDDD";
+a.onclick = function () {
+  a.innerText = "YEAHHHH SIRRR";
+  
+  
+}
+
+
